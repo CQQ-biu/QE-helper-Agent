@@ -38,6 +38,8 @@ class Settings(BaseSettings):
     RAG_TEMPERATURE: float = 0.1
     RAG_REQUEST_TIMEOUT: int = 60
     RAG_AGENT_MAX_ITERATIONS: int = 3
+    # 多 Agent 编排（主 Agent 路由 + 子 Agent 权限隔离）；false 时回退到单 Agent 循环
+    RAG_MULTI_AGENT_ENABLED: bool = True
     
     # API配置
     API_V1_PREFIX: str = "/api/v1"
